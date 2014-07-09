@@ -14,7 +14,8 @@ PS1='[\t \u@\h \W]\$ '
 
 PATH=$PATH:~/.cabal/bin
 PATH=$PATH:~/bin
-PLAY_HOME=$HOME/lib/play-2.2.1
+export IDEA_JDK=/opt/java7
+export PLAY_HOME=$HOME/lib/play-2.2.1
 export ECLIPSE_HOME=~/.eclipse
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
