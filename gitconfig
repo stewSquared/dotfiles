@@ -1,0 +1,18 @@
+[user]
+	name = Stewart Stewart
+	email = stewinsalot@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  type = cat-file -t
+  dump = cat-file -p
+  hist = log --pretty=format:'%w(80,0,21)%h %ad | %s%d' --graph --date=short
+[credential]
+	helper = cache
+[push]
+	default = simple
