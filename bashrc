@@ -14,11 +14,15 @@ PS1='[\t \u@\h \W]\$ '
 
 PATH=$PATH:~/.cabal/bin
 PATH=$PATH:~/bin
+export CHROME_BIN=/usr/bin/google-chrome-stable
 export IDEA_JDK=/opt/java7
 export PLAY_HOME=$HOME/lib/play-2.2.1
 export ECLIPSE_HOME=~/.eclipse
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
+
+shopt -s autocd
+
 #export CLASSPATH=.:CLASSPATH
 # JUnit
 #export CLASSPATH=CLASSPATH:~/lib/junit-4.11.jar:hamcrest-core-1.3.jar

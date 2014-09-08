@@ -51,10 +51,16 @@ alias wup='sudo ip link set wlp3s0 up'
 alias wdn='sudo killall wpa_supplicant; sudo ip link set wlp3s0 down'
 alias wpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/default.conf'
 alias wlan='sudo iw dev wlp3s0'
-alias wfnd='wlan scan'
+alias wfnd='wlan scan | grep -i ssid'
 alias wcon='wlan connect'
-alias amtrwi='wcon AmtrakConnect' #yep, I use it that often
+alias amtrwi='wcon AmtrakConnect' # yep, I use it that often
 
 # wifi passwords! in plaintext! (they're WEP networks, anyway)
 alias fran='wcon 2WIRE442 key d:0:3501975353'
 alias sun='wcon sunbeam key d:0:3607214458'
+
+# stuff that needs to be sorted
+alias sparktest='mosh stew@107.170.197.136'
+alias hansoo='mosh stew@192.168.90.7'
+alias ek='exit'
+alias ec='emacsclient -nw'
