@@ -21,9 +21,13 @@
 (unless (package-installed-p 'smartparens)
   (package-refresh-contents)
   (package-install 'smartparens))
-(smartparens-global-mode 1)
 
-;; Clojure mode hooks
+(unless (package-installed-p 'scala-mode2)
+  (package-refresh-contents)
+  (package-install 'scala-mode2))
+
+;; smart parens config
+(smartparens-global-mode 1)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
 
 ;; Misc.
