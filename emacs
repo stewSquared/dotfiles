@@ -31,5 +31,4 @@
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
 
 ;; Misc.
-(electric-pair-mode 1)
 (column-number-mode 1)
