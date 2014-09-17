@@ -26,9 +26,18 @@
   (package-refresh-contents)
   (package-install 'scala-mode2))
 
+(unless (package-installed-p 'dash)
+  (package-refresh-contents)
+  (package-install 'dash))
+
+(unless (package-installed-p 'cider)
+  (package-refresh-contents)
+  (package-install 'cider)1)
+
 ;; smart parens config
 (smartparens-global-mode 1)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
 
 ;; Misc.
 (column-number-mode 1)
+(global-set-key [(control h)] 'delete-backward-char)')
