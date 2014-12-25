@@ -40,4 +40,4 @@
 
 ;; Misc.
 (column-number-mode 1)
-(global-set-key [(control h)] 'delete-backward-char)')
+(global-set-key [(control h)] 'delete-backward-char)
