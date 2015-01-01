@@ -1,31 +1,36 @@
 ! terminal colors ------------------------------------------------------------
-! tangoesque scheme
-*background: #111111
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #204a87
-*color12: #3465a4
-! DarkMagenta + Magenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+!-- Viridian Color Scheme
+!-- https://github.com/wokka/Viridian-color-scheme.
+xterm*foreground: #71D289
+xterm*background: #004A41
+! Blue Cursor
+xterm*cursorColor: #00EFEF
+! Red Cursor
+!xterm*cursorColor: #F70000
+! Black + Dark Grey
+xterm*color0: #242424
+xterm*color8: #5A5A5A
+! Red + Bright Red
+xterm*color1: #BF4040
+xterm*color9: #F75353
+! Green + Bright Green
+xterm*color2: #00D700
+xterm*color10: #00FF00
+! Yellow + Bright Yellow
+xterm*color3: #FDAE5A
+xterm*color11: #E4E300
+! Blue + Bright Blue
+xterm*color4: #00AEFF
+xterm*color12: #0088FF
+! Magenta + Bright Magenta
+xterm*color5: #918EE4
+xterm*color13: #F269E4
+! Cyan + Bright Cyan
+xterm*color6: #00E0F2
+xterm*color14: #7DDCDB
+! Light Grey + White
+xterm*color7: #909090
+xterm*color15: #FFFFFF
 
 XTerm*faceName: inconsolata:size=12
 
