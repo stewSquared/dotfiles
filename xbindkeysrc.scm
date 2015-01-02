@@ -1,3 +1,6 @@
 (xbindkey '("XF86MonBrightnessDown") "xbacklight -dec 10")
 (xbindkey '("XF86MonBrightnessUp") "xbacklight -inc 10")
 (xbindkey '("XF86Search") "dmenu_run")
+(xbindkey '("XF86AudioLowerVolume") "amixer sset Master 2%-")
+(xbindkey '("XF86AudioRaiseVolume") "amixer sset Master 2%+")
+(xbindkey '("XF86AudioMute") "amixer sset Master toggle")
