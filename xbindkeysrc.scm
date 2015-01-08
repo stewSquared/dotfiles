@@ -4,4 +4,5 @@
 (xbindkey '("XF86AudioLowerVolume") "amixer sset Master 5%-")
 (xbindkey '("XF86AudioRaiseVolume") "amixer sset Master 5%+")
 (xbindkey '("XF86AudioMute") "amixer sset Master toggle")
+(xbindkey '("XF86AudioMicMute") "amixer sset Capture toggle")
 (xbindkey '("Print") "scrot -u -e 'mv $f ~/desktop/scrots'")
