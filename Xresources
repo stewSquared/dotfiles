@@ -71,3 +71,4 @@ xterm*color15:                 S_base3
 XTerm*faceName: inconsolata:size=12
 XTerm*metaSendsEscape: true
 
+Xcursor.size: 32
