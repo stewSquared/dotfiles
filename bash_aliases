@@ -2,7 +2,6 @@
 alias block='sudo block'
 alias bat='cat /sys/devices/platform/smapi/BAT0/remaining_percent'
 alias jblive='weechat irc://stewSquared@irc.geekshed.net/#jupiterbroadcasting'
-alias activator='~/lib/activator-1.2.3/activator'
 alias proset="python ~/coding/proset/proset.py 6 1440 900"
 alias pom='sleep 25m && systemctl suspend'
 alias take='mv ~/downloads/* .'
