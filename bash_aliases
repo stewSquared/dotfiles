@@ -5,7 +5,8 @@ alias jblive='weechat irc://stewSquared@irc.geekshed.net/#jupiterbroadcasting'
 alias proset="python ~/coding/proset/proset.py 6 1440 900"
 alias pom='sleep 25m && systemctl suspend'
 alias take='mv ~/downloads/* .'
-alias dv='setxkbmap dvorak; stty erase '
+alias dv='setxkbmap -layout dvorak -option ctrl:nocaps; stty erase ; exit'
+alias ek=dv
 
 # typos
 alias pyhton='python'
@@ -48,7 +49,7 @@ alias commit='git commit'
 # wifi. Should I just use networkmanager? Nah. Thisiseasy.
 alias wup='sudo ip link set wlp3s0 up'
 alias wdn='sudo killall wpa_supplicant; sudo ip link set wlp3s0 down'
-alias wpa='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/default.conf'
+alias wpa='sudo wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/default.conf -B'
 alias wlan='sudo iw dev wlp3s0'
 alias wfnd='wlan scan | grep -i ssid'
 alias wcon='wlan connect'
@@ -59,13 +60,15 @@ alias fran='wcon 2WIRE442 key d:0:3501975353'
 alias sun='wcon sunbeam key d:0:3607214458'
 
 # stuff that needs to be sorted
-alias sparktest='mosh stew@107.170.197.136'
+#alias sparktest='mosh stew@107.170.197.136'
 alias hansoo='mosh stew@192.168.90.7'
-alias ek='exit'
 alias ec='emacsclient -nw'
 alias xt='PWD=/home/stew/cur/ctig_portal xterm &'
 alias touchpad-toggle='source ~/bin/touchpad-toggle'
 alias sus='systemctl suspend'
 alias portal-work='cd cur/ctig_portal/; xt xt jvm/app; xt xt ..; vagrant up; vagrant ssh postgres'
 alias scalatdd='cd ~ ; rm -r sandbox ; cp -r coding/templates/scalatest sandbox ; cd sandbox ; xt emacs Main.scala src/test/scala/Tests.scala'
-alias portal-activator='activator -Dlan_prefix= -Dhttp.port=8080 -Devolutionplugin=enabled'
+alias portal-activator='activator -Dhttp.port=8080 -Dlan_prefix.0='
+alias us='setxkbmap us'
+alias ='; stty erase '
+alias wpatemp='sudo wpa_supplicant -i wlp3s0 -c temp.conf'
