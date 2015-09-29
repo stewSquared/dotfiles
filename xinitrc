@@ -1,5 +1,5 @@
 xrdb -load /home/stew/.Xresources
-setxkbmap dvorak
+setxkbmap -layout dvorak -option ctrl:nocaps
 xmodmap ~/.Xmodmap
 xbindkeys &
 xrandr --output DP1 --mode 1920x1080 --pos 0x0
