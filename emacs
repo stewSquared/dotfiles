@@ -36,11 +36,25 @@
 
 (unless (package-installed-p 'cider)
   (package-refresh-contents)
-  (package-install 'cider)1)
+  (package-install 'cider))
 
-;; smart parens config
-(smartparens-global-mode 1)
+(unless (package-installed-p 'geiser)
+  (package-refresh-contents)
+  (package-install 'geiser))
+
+;; geiser config
+(setq geiser-active-implementations '(guile))
+
+;; smartparens config
+(require 'smartparens-config)
+(sp-use-smartparens-bindings)
+(smartparens-global-strict-mode)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
+;;(define-key smartparens-mode-map (kbd "your-key") 'function)
+(define-key smartparens-mode-map (kbd "M-<down>") 'sp-splice-sexp-killing-forward)
+(define-key smartparens-mode-map (kbd "M-<up>") 'sp-splice-sexp-killing-backward)
+(define-key smartparens-mode-map (kbd "M-s") 'sp-splice-sexp-killing-around)
+
 ;; ensime config
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
