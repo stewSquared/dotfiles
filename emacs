@@ -26,6 +26,10 @@
   (package-refresh-contents)
   (package-install 'scala-mode2))
 
+(unless (package-installed-p 'ensime)
+  (package-refresh-contents)
+  (package-install 'ensime))
+
 (unless (package-installed-p 'dash)
   (package-refresh-contents)
   (package-install 'dash))
@@ -37,6 +41,9 @@
 ;; smart parens config
 (smartparens-global-mode 1)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
+;; ensime config
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 ;; Misc.
 (column-number-mode 1)
