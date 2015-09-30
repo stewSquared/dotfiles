@@ -42,6 +42,14 @@
   (package-refresh-contents)
   (package-install 'geiser))
 
+(unless (package-installed-p 'rainbow-delimiters)
+  (package-refresh-contents)
+  (package-install 'rainbow-delimiters))
+
+(unless (package-installed-p 'ac-cider)
+  (package-refresh-contents)
+  (package-install 'ac-cider))
+
 ;; geiser config
 (setq geiser-active-implementations '(guile))
 
@@ -50,6 +58,20 @@
 (sp-use-smartparens-bindings)
 (smartparens-global-strict-mode)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
+(add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
+
+;; cider config
+(add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
+
+(require 'ac-cider)
+(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+(add-hook 'cider-mode-hook 'ac-cider-setup)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+(eval-after-load "auto-complete"
+  '(progn
+     (add-to-list 'ac-modes 'cider-mode)
+     (add-to-list 'ac-modes 'cider-repl-mode)))
+
 ;;(define-key smartparens-mode-map (kbd "your-key") 'function)
 (define-key smartparens-mode-map (kbd "M-<down>") 'sp-splice-sexp-killing-forward)
 (define-key smartparens-mode-map (kbd "M-<up>") 'sp-splice-sexp-killing-backward)
