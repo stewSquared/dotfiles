@@ -50,6 +50,10 @@
   (package-refresh-contents)
   (package-install 'ac-cider))
 
+(unless (package-installed-p 'elm-mode)
+  (package-refresh-contents)
+  (package-install 'elm-mode))
+
 ;; geiser config
 (setq geiser-active-implementations '(guile))
 
