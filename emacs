@@ -55,7 +55,7 @@
   (package-install 'elm-mode))
 
 ;; geiser config
-(setq geiser-active-implementations '(guile))
+(setq geiser-active-implementations '(guile racket))
 
 ;; smartparens config
 (require 'smartparens-config)
