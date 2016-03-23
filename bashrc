@@ -23,6 +23,7 @@ export VISUAL="/usr/bin/emacs"
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
 
+export PAGER="less -S"
 
 shopt -s autocd
 
