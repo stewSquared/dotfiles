@@ -22,9 +22,9 @@
   (package-refresh-contents)
   (package-install 'smartparens))
 
-(unless (package-installed-p 'scala-mode2)
+(unless (package-installed-p 'scala-mode)
   (package-refresh-contents)
-  (package-install 'scala-mode2))
+  (package-install 'scala-mode))
 
 (unless (package-installed-p 'ensime)
   (package-refresh-contents)
