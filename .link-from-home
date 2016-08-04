@@ -1,0 +1,3 @@
+for filename in ~/dotfiles/*; do
+  ln -s -i $filename ~/.`basename $filename`
+done
