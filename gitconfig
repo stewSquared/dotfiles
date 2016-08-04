@@ -12,7 +12,10 @@
   br = branch
   type = cat-file -t
   dump = cat-file -p
-  hist = log --pretty=format:'%w(96,0,21)%h %ad | %s%d - %an' --graph --date=short
+  hist = log --pretty=format:'%w(96,0,14)%h %ad | %s%d'\
+             --date=format:"%d%b" --graph --abbrev=4
+  hista = log --pretty=format:'%w(96,0,14)%h %ad | %s%d - %an'\
+              --date=format:"%d%b" --graph --abbrev=4
 [credential]
 	helper = cache
 [push]
