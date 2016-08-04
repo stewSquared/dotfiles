@@ -1,0 +1,4 @@
+.lein
+indices/
+repl-history
+self-installs/
