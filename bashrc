@@ -11,6 +11,9 @@
 
 PS1='[\t \u@\h \W]\$ '
 
+export HISTFILESIZE=
+export HISTSIZE=
+
 SPARK_HOME=/home/stew/lib/spark-1.4.0-bin-hadoop2.4
 ADAM_HOME=/home/stew/coding/github.com/bigdatagenomics/adam
 
