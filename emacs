@@ -11,7 +11,7 @@
 ;; Install packages from melpa
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
 (unless (package-installed-p 'clojure-mode)
@@ -93,3 +93,4 @@
     (other-window -1))
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
+(set-default 'truncate-lines t)
