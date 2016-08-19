@@ -1,0 +1,6 @@
+function gh {
+  USER_REPO=`sed -e "s|https://github.com/||" <<< $1`
+  DEST="$HOME/github.com/$USER_REPO"
+  git clone "git@github.com:$USER_REPO.git" $DEST
+  cd $DEST
+}
