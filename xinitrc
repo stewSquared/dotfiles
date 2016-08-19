@@ -1,4 +1,5 @@
 xrdb -load /home/stew/.Xresources
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 setxkbmap -layout dvorak -option ctrl:nocaps
 xmodmap ~/.Xmodmap
 xbindkeys &
