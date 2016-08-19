@@ -16,12 +16,14 @@ export HISTSIZE=
 
 SPARK_HOME=/home/stew/lib/spark-1.4.0-bin-hadoop2.4
 ADAM_HOME=/home/stew/coding/github.com/bigdatagenomics/adam
+ACTIVATOR_HOME=/home/stew/lib/activator-dist-1.3.10
 
 PATH=$PATH:~/bin
 PATH=$PATH:~/.cabal/bin
 PATH=$PATH:~/.gem/ruby/2.2.0/bin
 PATH=$PATH:$SPARK_HOME/bin
 PATH=$PATH:$ADAM_HOME/bin
+PATH=$PATH:$ACTIVATOR_HOME/bin
 export VISUAL="/usr/bin/emacs"
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
