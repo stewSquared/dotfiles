@@ -68,7 +68,7 @@ xterm*color14:                 S_base1
 xterm*color15:                 S_base3
 
 ! Other xterm conf
-XTerm*faceName: inconsolata:size=16
+XTerm*faceName: inconsolata:size=14
 XTerm*metaSendsEscape: true
 
 Xcursor.size: 32
