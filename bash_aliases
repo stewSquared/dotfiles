@@ -47,10 +47,10 @@ alias clone='git clone'
 alias commit='git commit'
 
 # wifi. Should I just use networkmanager? Nah. Thisiseasy.
-alias wup='sudo ip link set wlp3s0 up'
-alias wdn='sudo killall wpa_supplicant; sudo ip link set wlp3s0 down'
-alias wpa='sudo wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant/default.conf -B'
-alias wlan='sudo iw dev wlp3s0'
+alias wup='sudo ip link set $IW_INTERFACE up'
+alias wdn='sudo killall wpa_supplicant; sudo ip link set $IW_INTERFACE down'
+alias wpa='sudo wpa_supplicant -i $IW_INTERFACE -c /etc/wpa_supplicant/default.conf -B'
+alias wlan='sudo iw dev $IW_INTERFACE'
 alias wfnd='wlan scan | grep -i ssid'
 alias wcon='wlan connect'
 alias amtrwi='wcon AmtrakConnect' # yep, I use it that often
@@ -72,7 +72,7 @@ alias scalatdd='cd ~ ; rm -r sandbox ; cp -r coding/templates/scalatest sandbox 
 alias portal-activator='activator -Dhttp.port=8080 -Dlan_prefix.0= -Dlogin.timeout=9000999'
 alias us='setxkbmap us'
 alias =' ; stty erase '
-alias wpatemp='sudo wpa_supplicant -i wlp3s0 -c temp.conf'
+alias wpatemp='sudo wpa_supplicant -i $IW_INTERFACE -c temp.conf'
 alias avocado-submit='/home/stew/coding/github.com/drivergroup/avocado/bin/avocado-submit'
 alias hista='git hista'
 alias gamend='gimit --amend --no-edit'

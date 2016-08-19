@@ -22,6 +22,7 @@ PATH=$PATH:$ADAM_HOME/bin
 export VISUAL="/usr/bin/emacs"
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
+export IW_INTERFACE=wlp4s0
 
 export PAGER="less -S"
 
