@@ -7,9 +7,9 @@
 
 [[ $- != *i* ]] && return
 
-[[ -f ~/.bash_aliases ]] && . ~/.aliases
+[[ -f ~/.functions ]] && . ~/.functions
 
-[[ -f ~/.bash_aliases ]] && . ~/.functions
+[[ -f ~/.aliases ]] && . ~/.aliases
 
 PS1='[\t \u@\h \W]\$ '
 
