@@ -14,57 +14,24 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(unless (package-installed-p 'org-mode)
-  (package-refresh-contents)
-  (package-install 'org-mode))
+(defun install (package)
+  (unless (package-installed-p package)
+    	  (package-install package)))
 
-(unless (package-installed-p 'markdown-mode)
-  (package-refresh-contents)
-  (package-install 'markdown-mode))
-
-(unless (package-installed-p 'go-mode)
-  (package-refresh-contents)
-  (package-install 'go-mode))
-
-(unless (package-installed-p 'clojure-mode)
-  (package-refresh-contents)
-  (package-install 'clojure-mode))
-
-(unless (package-installed-p 'smartparens)
-  (package-refresh-contents)
-  (package-install 'smartparens))
-
-(unless (package-installed-p 'scala-mode)
-  (package-refresh-contents)
-  (package-install 'scala-mode))
-
-(unless (package-installed-p 'ensime)
-  (package-refresh-contents)
-  (package-install 'ensime))
-
-(unless (package-installed-p 'dash)
-  (package-refresh-contents)
-  (package-install 'dash))
-
-(unless (package-installed-p 'cider)
-  (package-refresh-contents)
-  (package-install 'cider))
-
-(unless (package-installed-p 'geiser)
-  (package-refresh-contents)
-  (package-install 'geiser))
-
-(unless (package-installed-p 'rainbow-delimiters)
-  (package-refresh-contents)
-  (package-install 'rainbow-delimiters))
-
-(unless (package-installed-p 'ac-cider)
-  (package-refresh-contents)
-  (package-install 'ac-cider))
-
-(unless (package-installed-p 'elm-mode)
-  (package-refresh-contents)
-  (package-install 'elm-mode))
+(package-refresh-contents)
+(install 'org)
+(install markdown-mode)
+(install go-mode)
+(install clojure-mode)
+(install smartparens)
+(install scala-mode)
+(install ensime)
+(install dash)
+(install cider)
+(install geiser)
+(install rainbow-delimiters)
+(install ac-cider)
+(install elm-mode)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
