@@ -7,9 +7,9 @@
 
 [[ $- != *i* ]] && return
 
-[[ -f ~/.bash_aliases ]] && . ~/.aliases
+[[ -f ~/.functions ]] && . ~/.functions
 
-[[ -f ~/.bash_aliases ]] && . ~/.functions
+[[ -f ~/.aliases ]] && . ~/.aliases
 
 PS1='[\t \u@\h \W]\$ '
 
@@ -19,13 +19,16 @@ export HISTSIZE=
 SPARK_HOME=/home/stew/lib/spark-1.4.0-bin-hadoop2.4
 ADAM_HOME=/home/stew/coding/github.com/bigdatagenomics/adam
 ACTIVATOR_HOME=/home/stew/lib/activator-dist-1.3.10
+RUBY_HOME=/home/stew/.gem/ruby/2.3.0
+export GOPATH=~/go
 
 PATH=$PATH:~/bin
 PATH=$PATH:~/.cabal/bin
-PATH=$PATH:~/.gem/ruby/2.2.0/bin
+PATH=$PATH:$RUBY_HOME/bin
 PATH=$PATH:$SPARK_HOME/bin
 PATH=$PATH:$ADAM_HOME/bin
 PATH=$PATH:$ACTIVATOR_HOME/bin
+PATH=$PATH:$GOPATH/bin
 export VISUAL="/usr/bin/emacs"
 export EDITOR="/usr/bin/emacs -nw"
 export GIT_EDITOR="/usr/bin/emacs -nw"
