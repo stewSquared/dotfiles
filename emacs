@@ -14,6 +14,10 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+(unless (package-installed-p 'org)
+  (package-refresh-contents)
+  (package-install 'org))
+
 (unless (package-installed-p 'clojure-mode)
   (package-refresh-contents)
   (package-install 'clojure-mode))
