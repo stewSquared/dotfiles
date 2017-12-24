@@ -65,6 +65,32 @@
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (setq ensime-startup-notification nil)
 
+;; Org mode config
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+;; Org Present
+(add-to-list 'load-path "~/github.com/rlister/org-present")
+(autoload 'org-present "org-present" nil t)
+
+;; Precise behaviour of org-present during start and quit is controlled from hooks. The following will enlarge text, show images, hide the cursor and make the buffer read-only:
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-hide-cursor)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-show-cursor)
+                 (org-present-read-write)))))
+
 ;; Misc.
 (column-number-mode 1)
 (global-set-key [(control h)] 'delete-backward-char)
