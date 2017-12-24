@@ -63,6 +63,7 @@
 ;; ensime config
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(setq ensime-startup-notification nil)
 
 ;; Misc.
 (column-number-mode 1)
