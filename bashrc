@@ -11,7 +11,10 @@
 
 [[ -f ~/.aliases ]] && . ~/.aliases
 
-PS1='[\t \u@\h \W]\$ '
+BLUE_COLOR="\[$(tput setaf 4)\]"
+RESET_COLOR="\[$(tput sgr0)\]"
+
+PS1="${BLUE_COLOR}[\t \u@\h \W]\$${RESET_COLOR=} "
 
 export HISTFILESIZE=
 export HISTSIZE=
