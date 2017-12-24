@@ -6,7 +6,7 @@ xbindkeys &
 xrandr --output DP-1 --mode 2560x1440 --pos 0x0
 xrandr --output DP-3 --mode 2560x1440 --pos 2560x0
 xrandr --output DP-4 --mode 1920x1080 --pos 1600x1440 --primary
-xflux -z 94103 -k 2800
-xset b 0
-xautolock -time 15 -locker slock -killtime 10 -killer 'systemctl suspend' &
+xset b 0 # mute bell
+xautolock -time 10 -locker slock -killtime 30 -killer 'systemctl suspend' &
 exec xmonad
+
