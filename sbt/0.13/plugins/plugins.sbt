@@ -1,10 +1,7 @@
-addSbtPlugin("org.ensime" % "sbt-ensime" % "0.5.1")
+addSbtPlugin("org.ensime" % "sbt-ensime" % "2.1.0")
 
-addSbtPlugin("com.orrsella" % "sbt-stats" % "1.0.5")
+addSbtPlugin("com.orrsella" % "sbt-stats" % "1.0.7")
 
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.0")
 
-addSbtPlugin("com.softwaremill.clippy" % "plugin-sbt" % "0.3.4")
-
-// evict ensime-sbt dependency on older scalariform
-//libraryDependencies += "org.scalariform" %% "scalariform" % "0.1.8"
+addSbtPlugin("com.softwaremill.clippy" % "plugin-sbt" % "0.5.3")

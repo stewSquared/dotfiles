@@ -1,1 +1,4 @@
 emacs.d/
+sbt/0.13/plugins/credentials.sbt
+sbt/0.13/templates/
+sbt/preloaded/

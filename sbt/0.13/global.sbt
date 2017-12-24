@@ -1,24 +1,9 @@
-// fork in run := true
+libraryDependencies += "com.lihaoyi" % "ammonite" % "1.0.3" % "test" cross CrossVersion.full
 
-resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
-
-libraryDependencies += "com.lihaoyi" % "ammonite-repl" % "0.7.4" % "test" cross CrossVersion.full
-
-initialCommands in (Test, console) := """ammonite.repl.Main.run("")"""
-
-//scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
+sourceGenerators in Test += Def.task {
+  val file = (sourceManaged in Test).value / "amm.scala"
+  IO.write(file, """object amm extends App { ammonite.Main.main(args) }""")
+  Seq(file)
+}.taskValue
 
 cancelable in Global := true
-
-// import org.ensime.Imports.EnsimeKeys
-// import scalariform.formatter.preferences._
-
-// One day, when ENSIME uses a version of scalariform that doesn't dangle my parens.
-
-// EnsimeKeys.scalariform := EnsimeKeys.scalariform.value
-//   .setPreference(DoubleIndentClassDeclaration, true)
-//   .setPreference(MultilineScaladocCommentsStartOnFirstLine, true)
-//   .setPreference(PlaceScaladocAsterisksBeneathSecondAsterisk, true)
-//   .setPreference(DanglingCloseParenthesis, Prevent)
-//   // .setPreference(DoubleIndentMethodDeclaration, true)
-//   // .setPreference(NewlineAtEndOfFile, true)
