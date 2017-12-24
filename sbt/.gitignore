@@ -1,5 +1,10 @@
-target/
-dependency/
-staging/
 boot/
+dependency/
+preloaded/
+staging/
+target/
+templates/
+zinc/
+
+credentials.sbt
 repositories

@@ -1,5 +1,1 @@
 emacs.d/
-sbt/preloaded/
-sbt/**/credentials.sbt
-sbt/*/templates/
-sbt/*/zinc/
