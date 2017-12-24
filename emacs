@@ -91,12 +91,15 @@
                  (org-present-show-cursor)
                  (org-present-read-write)))))
 
-;; Misc.
-(column-number-mode 1)
-(global-set-key [(control h)] 'delete-backward-char)
+;; prev-window
 (defun prev-window ()
   (interactive)
     (other-window -1))
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
+
+;; Misc.
+(column-number-mode 1)
+(global-set-key [(control h)] 'delete-backward-char)
 (set-default 'truncate-lines t)
+(global-auto-revert-mode 1)
