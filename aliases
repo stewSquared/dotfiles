@@ -1,13 +1,3 @@
-# Things that almost shouldn't be aliases
-alias pom='sleep 25m && systemctl suspend'
-alias take='mv ~/downloads/* .'
-alias dv='setxkbmap -layout dvorak -option ctrl:nocaps; stty erase ; exit'
-alias ek=dv
-
-# typos
-alias pyhton='python'
-alias ypthon='python'
-
 # nav
 alias ls='ls --color=auto'
 alias .='ls .'
@@ -24,61 +14,66 @@ alias mv='mv -i'
 alias free='free -h'
 alias mkdir='mkdir -p'
 alias emacs='emacs -nw'
+alias less='less -R'
+alias psql='psql -S'
 
 # git aliases
 alias gad='git add'
 alias gimit='git commit'
+alias gamend='gimit --amend --no-edit'
 alias ginit='git init'
 alias gist='git status'
 alias gout='git checkout'
 alias hist='git hist'
+alias gidif='git diff'
+alias hista='git hista'
+alias save='git stash save'
 
 # forgetting to type 'git'
-alias add='git add'
 alias push='git push'
 alias pull='git pull'
 alias fetch='git fetch'
 alias merge='git merge'
 alias clone='git clone'
 alias commit='git commit'
+alias stash='git stash'
+alias rebase='git rebase -i'
 
-# wifi. Should I just use networkmanager? Nah. Thisiseasy.
+# wifi.
 alias wup='sudo ip link set $IW_INTERFACE up'
 alias wdn='sudo killall wpa_supplicant; sudo ip link set $IW_INTERFACE down'
-alias wpa='sudo wpa_supplicant -i $IW_INTERFACE -c /etc/wpa_supplicant/default.conf -B'
+alias wpa_supplicant='wpa_supplicant -i $IW_INTERFACE'
+alias wpa='sudo wpa_supplicant -c /etc/wpa_supplicant/default.conf -B'
 alias wlan='sudo iw dev $IW_INTERFACE'
 alias wfnd='wlan scan | grep -i ssid'
 alias wcon='wlan connect'
+alias wpatemp='sudo wpa_supplicant -c temp.conf'
 
-# wifi passwords! in plaintext! (they're WEP networks, anyway)
-alias fran='wcon 2WIRE442 key d:0:3501975353'
-alias sun='wcon sunbeam key d:0:3607214458'
-
-# stuff that needs to be sorted
-#alias sparktest='mosh stew@107.170.197.136'
-alias hansoo='mosh stew@192.168.90.7'
-alias ec='emacsclient -nw'
-alias xt='xterm -sl 1048576 & disown'
-alias touchpad-toggle='source ~/bin/touchpad-toggle'
-alias sus='systemctl suspend'
-alias portal-work='cd cur/ctig_portal/; xt xt jvm/app; xt xt ..; vagrant up; vagrant ssh postgres'
-alias scalatdd='cd ~ ; rm -r sandbox ; cp -r coding/templates/scalatest sandbox ; cd sandbox ; xt emacs Main.scala src/test/scala/Tests.scala'
-alias portal-activator='activator -Dhttp.port=8080 -Dlan_prefix.0= -Dlogin.timeout=9000999'
-alias portal-sbt='sbt -Dhttp.port=8080 -Dlan_prefix.0= -Dlogin.timeout=9000999'
-alias us='setxkbmap us'
-alias =' ; stty erase '
-alias wpatemp='sudo wpa_supplicant -i $IW_INTERFACE -c temp.conf'
-alias avocado-submit='/home/stew/coding/github.com/drivergroup/avocado/bin/avocado-submit'
-alias hista='git hista'
-alias gamend='gimit --amend --no-edit'
-alias xflux='xflux -z 94107'
-alias bt='sudo hciconfig hci0 up; sudo hcitool cc 90:7F:61:2C:10:F5'
-alias gidif='git diff'
-alias xflux='xflux -z 94107'
+# pass through aliases
 alias sudo='sudo '
 alias man='man '
-alias stash='git stash'
-alias REPLesent='scala -Dscala.color -language:_ -nowarn -i REPLesent.scala'
+alias watch='watch '
+
+# configuration
+alias us='setxkbmap us'
+alias =' ; stty erase '
 alias pt='sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime'
 alias et='sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime'
+alias mt='sudo ln -sf /usr/share/zoneinfo/America/Boise /etc/localtime'
+
+# pseudo-functions
+alias pom='sleep 25m && systemctl suspend'
+alias take='mv ~/downloads/* .'
+alias dv='setxkbmap -layout dvorak -option ctrl:nocaps; stty erase ; exit'
+alias ek=dv
 alias docker-default-postgres='docker run -it -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -e POSTGRES_PASSWORD=postgres postgres'
+alias REPLesent='scala -Dscala.color -language:_ -nowarn -i REPLesent.scala'
+alias touchpad-toggle='source ~/bin/touchpad-toggle'
+alias pingc='watch ping -c 1 8.8.8.8'
+alias service-sources='find github.com/drivergroup/*-service/src/*/scala -name "*.scala"'
+#alias bt='sudo hciconfig hci0 up; sudo hcitool cc 90:7F:61:2C:10:F5'
+alias sus='systemctl suspend'
+alias ec='emacsclient -nw'
+alias xt='xterm -sl 1048576 & disown'
+
+# to be sorted
