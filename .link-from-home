@@ -1,3 +1,4 @@
-for filename in ~/dotfiles/*; do
-  ln -s -i $filename ~/.`basename $filename`
+shopt -s dotglob
+for filename in ~/dotfiles/src/.aliases; do
+    ln -si -T $filename ~/`basename $filename`
 done
