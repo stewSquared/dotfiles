@@ -25,7 +25,7 @@ function blue_prompt {
 export HISTFILESIZE=
 export HISTSIZE=
 
-#### HOME and PATH
+## HOME and PATH
 SPARK_HOME=/home/stew/lib/spark-1.4.0-bin-hadoop2.4
 ADAM_HOME=/home/stew/coding/github.com/bigdatagenomics/adam
 ACTIVATOR_HOME=/home/stew/lib/activator-dist-1.3.10
