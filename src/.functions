@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 function gh {
   USER_REPO=`sed -e "s|https://github.com/||" <<< $1`
   DEST="$HOME/github.com/$USER_REPO"

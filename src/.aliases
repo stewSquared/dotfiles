@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # nav
 alias ls='ls --color=auto'
 alias .='ls .'
