@@ -1,8 +1,21 @@
 #!/usr/bin/bash
 
-function gh {
-  USER_REPO=`sed -e "s|https://github.com/||" <<< $1`
-  DEST="$HOME/github.com/$USER_REPO"
-  git clone "git@github.com:$USER_REPO.git" $DEST
-  cd $DEST
+clone-github () {
+    local -r user_repo=$(sed -e "s|.*github.com/||" <<< $1)
+    local -r dest="$HOME/github.com/$user_repo"
+    if [[ -e $dest ]]; then
+	echo "$dest already exists"
+	echo "cd -- $dest"
+	cd $dest
+	return 1
+    else
+	git clone "git@github.com:$user_repo.git" $dest\
+	    && cd $dest
+    fi
+}
+
+clone-drivergroup () {
+    local -r repo=$(sed -e "s|.*github.com/drivergroup/||" <<< $1)
+    clone-github "drivergroup/$repo"\
+	&& git config --local user.email 'stewart@driver.xyz'
 }

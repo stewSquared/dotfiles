@@ -30,6 +30,8 @@ alias hist='git hist'
 alias gidif='git diff'
 alias hista='git hista'
 alias save='git stash save'
+alias gh="clone-github"
+alias dg="clone-drivergroup"
 
 # forgetting to type 'git'
 alias push='git push'
