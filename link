@@ -1,0 +1,23 @@
+#!/bin/bash
+
+unpack () {
+    local -r filename=$1
+    local -r target=$filename
+    local -r link_name=~/$(basename $filename)
+    if [[ ! -e $link_name ]]; then
+	ln -s -T $target $link_name
+	echo "created: $link_name -> $target"
+    elif [[ -h $link_name ]]; then
+	ln -nsf $target $link_name
+	echo "updated: $link_name -> $target"
+    else
+	echo "skipped: $link_name. File already already exists."
+    fi
+}
+
+main () {
+    shopt -s dotglob
+    for filename in ~/dotfiles/src/*; do
+	unpack $filename
+    done
+}; main
