@@ -3,3 +3,5 @@
 notes/
 .ensime
 .ensime_cache
+/.task/
+/.taskrc

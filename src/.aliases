@@ -82,3 +82,4 @@ alias xt='xterm & disown -r'
 
 # to be sorted
 alias xrdb-reload='(cd ~; xrdb -I.Xresources.d .Xresources)'
+alias tl="task-local"

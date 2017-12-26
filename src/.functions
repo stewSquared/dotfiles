@@ -19,3 +19,31 @@ clone-drivergroup () {
     clone-github "drivergroup/$repo"\
 	&& git config --local user.email 'stewart@driver.xyz'
 }
+
+task-init () {
+    if [[ (-e .taskrc) ]]; then
+	echo "Taskwarrior config already exists"
+    else
+	cat > .taskrc <<-EOF
+	include ~/.taskrc
+	data.location=
+	exit.on.missing.db=yes
+	EOF
+	task-local rc.exit.on.missing.db=no > /dev/null 2>&1
+    fi
+}
+
+task-local () {
+    local dir=$(pwd -P)
+    while [[ ($HOME < $dir) && ! (-f $dir/.taskrc) ]]; do
+	dir=$(dirname $dir)
+    done
+    declare -r dir
+    if [[ $HOME < $dir ]]; then
+	local -r taskrc="$dir/.taskrc"
+	local -r taskdata="$dir/.task"
+	TASKDATA=$taskdata TASKRC=$taskrc task $@
+    else
+	task $@
+    fi
+}
