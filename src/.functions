@@ -25,7 +25,7 @@ task-init () {
 	echo "Taskwarrior config already exists"
     else
 	cat > .taskrc <<-EOF
-	include ~/.taskrc
+	include ~/.taskrc_global
 	data.location=
 	exit.on.missing.db=yes
 	EOF
@@ -44,6 +44,6 @@ task-local () {
 	local -r taskdata="$dir/.task"
 	TASKDATA=$taskdata TASKRC=$taskrc task $@
     else
-	task $@
+	task rc:~/.taskrc_global $@
     fi
 }
