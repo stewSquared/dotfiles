@@ -14,13 +14,19 @@
 ## Shell configuration
 
 shopt -s autocd
+shopt -s cdspell
 
-function blue_prompt {
+function set_prompt {
     local blue="\[$(tput setaf 4)\]"
     local reset="\[$(tput sgr0)\]"
-    PS1="${blue}[\t \u@\h \W]\$${reset=} "
-}; blue_prompt; unset -f blue_prompt
+    local info="[\t \u@\h\$PWD \$?]"
+    local prompt="\! \W \\\$"
+    PS1="${blue}\\\`#$prompt\\\` ${reset}"
+}; set_prompt; unset -f set_prompt
 
-# For infinite .bash_history
+shopt -s histappend
+shopt -s histreedit
+shopt -s histverify
 HISTFILESIZE=
 HISTSIZE=
+HISTIGNORE="[ ]*"
