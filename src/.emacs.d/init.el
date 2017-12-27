@@ -103,3 +103,4 @@
 (global-set-key [(control h)] 'delete-backward-char)
 (set-default 'truncate-lines t)
 (global-auto-revert-mode 1)
+(setq vc-follow-symlinks t)
