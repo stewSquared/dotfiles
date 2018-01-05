@@ -17,6 +17,7 @@ alias free='free -h'
 alias mkdir='mkdir -p'
 alias less='less -R'
 alias psql='psql -S'
+alias sbt='sbt -mem 8000'
 
 # git aliases
 alias gad='git add'
@@ -55,7 +56,7 @@ alias wpatemp='sudo wpa_supplicant -c temp.conf'
 # pass through aliases
 alias sudo='sudo '
 alias man='man '
-alias watch='watch '
+alias watch='watch -n 0.5 -c '
 alias d='disown-background-command '
 
 # configuration
