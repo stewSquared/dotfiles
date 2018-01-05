@@ -15,6 +15,7 @@
 
 shopt -s autocd
 shopt -s cdspell
+shopt -os noclobber
 
 function set_prompt {
     local blue="\[$(tput setaf 4)\]"
