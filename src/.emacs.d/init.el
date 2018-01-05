@@ -32,6 +32,7 @@
 (install 'rainbow-delimiters)
 (install 'ac-cider)
 (install 'elm-mode)
+(install 'magit)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
@@ -102,6 +103,7 @@
 (column-number-mode 1)
 (visual-line-mode t)
 (global-set-key [(control h)] 'delete-backward-char)
+(global-set-key (kbd "C-x g") 'magit-status)
 (set-default 'truncate-lines t)
 (global-auto-revert-mode 1)
 (setq vc-follow-symlinks t)
