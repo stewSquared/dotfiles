@@ -57,6 +57,7 @@ alias wpatemp='sudo wpa_supplicant -c temp.conf'
 alias sudo='sudo '
 alias man='man '
 alias watch='watch '
+alias d='disown-background-command '
 
 # configuration
 alias us='setxkbmap us'

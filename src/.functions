@@ -47,3 +47,7 @@ task-local () {
 	task rc:~/.taskrc_global $@
     fi
 }
+
+disown-background-command () {
+    eval $@ > /dev/null & disown $!
+}
