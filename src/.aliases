@@ -79,7 +79,9 @@ alias service-sources='find github.com/drivergroup/*-service/src/*/scala -name "
 #alias bt='sudo hciconfig hci0 up; sudo hcitool cc 90:7F:61:2C:10:F5'
 alias sus='systemctl suspend'
 alias ec='emacsclient -nw'
-alias xt='xterm & disown -r'
+alias xt='d xterm'
+alias st='d command st -e dvtm'
+alias ut='d urxvt'
 
 # to be sorted
 alias xrdb-reload='(cd ~; xrdb -I.Xresources.d .Xresources)'
