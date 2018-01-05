@@ -62,9 +62,9 @@ alias d='disown-background-command '
 # configuration
 alias us='setxkbmap us'
 alias =' ; stty erase '
-alias pt='sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime'
-alias et='sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime'
-alias mt='sudo ln -sf /usr/share/zoneinfo/America/Boise /etc/localtime'
+alias tzpt='sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime'
+alias tzet='sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime'
+alias tzmt='sudo ln -sf /usr/share/zoneinfo/America/Boise /etc/localtime'
 
 # pseudo-functions
 alias pom='sleep 25m && systemctl suspend'
