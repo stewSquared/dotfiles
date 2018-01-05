@@ -100,7 +100,11 @@
 
 ;; Misc.
 (column-number-mode 1)
+(visual-line-mode t)
 (global-set-key [(control h)] 'delete-backward-char)
 (set-default 'truncate-lines t)
 (global-auto-revert-mode 1)
 (setq vc-follow-symlinks t)
+(setq inhibit-startup-screen t)
+(menu-bar-mode -1)
+(setq mouse-yank-at-point t)
