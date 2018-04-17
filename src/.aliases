@@ -89,3 +89,4 @@ alias ut='d urxvt'
 alias xrdb-reload='(cd ~; xrdb -I.Xresources.d .Xresources)'
 alias tl="task-local"
 alias task="task rc:~/.taskrc_global"
+alias ecs='ec --alternate-editor= -s'
