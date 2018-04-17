@@ -31,3 +31,9 @@ shopt -s histverify
 HISTFILESIZE=
 HISTSIZE=
 HISTIGNORE="[ ]*"
+
+## env related to shell interface
+export VISUAL="/usr/bin/emacsclient -c"
+export EDITOR="/usr/bin/emacsclient -t"
+export GIT_EDITOR="/usr/bin/emacsclient -t"
+export PAGER="less -S"

@@ -21,9 +21,9 @@ PATH=$PATH:$HOME/github.com/drivergroup/ude-scripts
 PATH=$PATH:$HOME/perl5/bin
 
 ## Common env
-export VISUAL="/usr/bin/emacs"
-export EDITOR="/usr/bin/emacs -nw"
-export GIT_EDITOR="/usr/bin/emacs -nw"
+export VISUAL="/usr/bin/emacsclient -c"
+export EDITOR="/usr/bin/emacsclient -t"
+export GIT_EDITOR="/usr/bin/emacsclient -t"
 export PAGER="less -S"
 
 ## system-specific
