@@ -38,4 +38,11 @@ xterm*faceName: inconsolata:size=10
 xterm*metaSendsEscape: true
 xterm*saveLines: 1048576
 
+! emacs conf
+emacs*toolBar: 0
+emacs*menuBar: off
+emacs*verticalScrollBars: off
+emacs*FontBackend: xft
+emacs*font: inconsolata:fontSize=10
+
 Xcursor.size: 32

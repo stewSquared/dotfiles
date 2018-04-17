@@ -99,6 +99,17 @@
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
 
+;; Solarized color theme
+(add-to-list 'custom-theme-load-path "~/github.com/sellout/emacs-color-theme-solarized")
+(set-frame-parameter nil 'background-mode 'light)
+(set-terminal-parameter nil 'background-mode 'light)
+(load-theme 'solarized t)
+
+;; Scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+
 ;; Misc.
 (column-number-mode 1)
 (visual-line-mode t)
