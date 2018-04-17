@@ -1,0 +1,21 @@
+#!/bin/bash
+
+replace_existing() {
+    local -r filename=$1
+    local -r target=$filename
+    local -r link_name=~/`basename $filename`
+    if [[ -h $link_name ]]; then
+	ln -nsf $link_name
+    else
+	if [[ (-d $link_name)]]; then
+	    rm -ri $link_name
+	fi
+	ln -si -T $link_name
+}
+
+main () {
+    shopt -s dotglob
+    for filename in ~/dotfiles/src/*; do
+	replace_existing $filename
+    done
+} main
