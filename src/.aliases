@@ -18,6 +18,7 @@ alias mkdir='mkdir -p'
 alias less='less -R'
 alias psql='psql -S'
 alias sbt='sbt -mem 8000'
+alias gzip='gzip -k'
 
 # git aliases
 alias gad='git add'
