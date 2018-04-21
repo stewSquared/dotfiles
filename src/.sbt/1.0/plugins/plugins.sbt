@@ -1,4 +1,4 @@
-addSbtPlugin("org.ensime" % "sbt-ensime" % "2.1.0")
+addSbtPlugin("org.ensime" % "sbt-ensime" % "2.5.1")
 
 // addSbtPlugin("com.orrsella" % "sbt-stats" % "1.0.7")
 
