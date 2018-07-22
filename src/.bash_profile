@@ -5,6 +5,8 @@
 # Note to self: sometimes called .bash_login -- I like that name better.
 # source ~/.bashrc
 
+echo "I am running bash profile!"
+
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
 ## HOME and PATH
@@ -19,6 +21,7 @@ PATH=$PATH:$ACTIVATOR_HOME/bin
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/github.com/drivergroup/ude-scripts
 PATH=$PATH:$HOME/perl5/bin
+PATH=$PATH:$HOME/.bloop/
 
 ## Common env
 export VISUAL="/usr/bin/emacsclient -c"
@@ -34,3 +37,6 @@ PERL5LIB="/home/stew/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/stew/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/stew/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/stew/perl5"; export PERL_MM_OPT;
+
+## Bloop bash completions
+source ~/.bloop/bash/bloop
