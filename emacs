@@ -22,6 +22,10 @@
   (package-refresh-contents)
   (package-install 'clojure-mode))
 
+(unless (package-installed-p 'idris-mode)
+  (package-refresh-contents)
+  (package-install 'idris-mode))
+
 (unless (package-installed-p 'smartparens)
   (package-refresh-contents)
   (package-install 'smartparens))
