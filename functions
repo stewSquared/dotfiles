@@ -4,3 +4,9 @@ function gh {
   git clone "git@github.com:$USER_REPO.git" $DEST
   cd $DEST
 }
+function bb {
+  USER_REPO=`sed -e "s|https://bitbucket.org/||" <<< $1`
+  DEST="$HOME/bitbucket.org/$USER_REPO"
+  git clone "git@bitbucket.org:$USER_REPO.git" $DEST
+  cd $DEST
+}
