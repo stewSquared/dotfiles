@@ -45,7 +45,7 @@ alias rebase='git rebase -i'
 
 # wifi.
 alias wup='sudo ip link set $IW_INTERFACE up'
-alias wdn='sudo killall wpa_supplicant; sudo ip link set $IW_INTERFACE down'
+alias wdn='sudo ip link set $IW_INTERFACE down'
 alias wpa_supplicant='wpa_supplicant -i $IW_INTERFACE'
 alias wpa='sudo wpa_supplicant -c /etc/wpa_supplicant/default.conf -B'
 alias wlan='sudo iw dev $IW_INTERFACE'
