@@ -33,6 +33,7 @@
 (install 'ac-cider)
 (install 'elm-mode)
 (install 'magit)
+(install 'projectile)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
@@ -108,6 +109,11 @@
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mouse 't)
+
+;; Projectile Mode
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; Misc.
 (column-number-mode 1)
