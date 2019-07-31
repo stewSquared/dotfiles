@@ -34,6 +34,7 @@
 (install 'elm-mode)
 (install 'magit)
 (install 'projectile)
+(install 'solarized-theme)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
@@ -99,11 +100,9 @@
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
 
-;; Solarized color theme
-(add-to-list 'custom-theme-load-path "~/github.com/sellout/emacs-color-theme-solarized")
-(set-frame-parameter nil 'background-mode 'light)
-(set-terminal-parameter nil 'background-mode 'light)
-(load-theme 'solarized t)
+;; TODO: Use only for GUI emacs
+;; (load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; Scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
