@@ -19,6 +19,10 @@
           (package-refresh-contents)
     	  (package-install package)))
 
+(install 'use-package)
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 (install 'org)
 (install 'markdown-mode)
 (install 'go-mode)
