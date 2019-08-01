@@ -35,15 +35,14 @@
   :init (setq geiser-active-implementations '(guile racket)))
 
 ;; smartparens config
-(use-package smartparens :demand
+(use-package smartparens
   :hook (clojure-mode)
   :bind (:map smartparens-mode-map
 	      ("M-<down>" . 'sp-splice-sexp-killing-forward)
 	      ("M-<up>" . 'sp-splice-sexp-killing-backward)
 	      ("M-s" . 'sp-splice-sexp-killing-around))
-  :config
-  (sp-use-smartparens-bindings)
-  (smartparens-global-strict-mode))
+  :init (smartparens-global-strict-mode)
+  :config (sp-use-smartparens-bindings))
 
 ;; Cider config
 ;; (use-package cider
