@@ -9,10 +9,15 @@
    version-control t)       ; use versioned backups
 
 ;; Install packages from melpa
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+;; Workaround for gnults bug that breaks interaction with elpa
+;; See: https://debbugs.gnu.org/cgi/bugreport.cgi?bug=34341
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
