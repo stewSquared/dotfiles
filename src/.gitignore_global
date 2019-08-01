@@ -4,3 +4,4 @@
 .ensime_cache
 /.task/
 /.taskrc
+.bloop/
