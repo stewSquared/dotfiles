@@ -22,8 +22,13 @@
 
 (use-package markdown-mode)
 (use-package clojure-mode)
-(use-package scala-mode)
 (use-package rainbow-delimiters)
+
+(use-package scala-mode
+  :mode "\\.s\\(cala\\|bt\\)$")
+
+(use-package sbt-mode
+  :commands sbt-start sbt-command)
 
 ;; geiser config
 (use-package geiser
