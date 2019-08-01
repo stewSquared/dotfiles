@@ -41,7 +41,7 @@
 (setq geiser-active-implementations '(guile racket))
 
 ;; smartparens config
-(use-package smartparens
+(use-package smartparens :demand
   :hook (clojure-mode cider-repl-mode)
   :bind (:map smartparens-mode-map
 	      ("M-<down>" . 'sp-splice-sexp-killing-forward)
