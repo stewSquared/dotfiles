@@ -1,6 +1,6 @@
 addSbtPlugin("org.ensime" % "sbt-ensime" % "2.5.1")
 
-// addSbtPlugin("ch.epfl.scala" % "sbt-bloop" % "1.0.0-M11")
+addSbtPlugin("ch.epfl.scala" % "sbt-bloop" % "1.3.2")
 
 // addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.3")
 
