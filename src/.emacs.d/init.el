@@ -23,7 +23,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(install 'org)
 (install 'markdown-mode)
 (install 'go-mode)
 (install 'clojure-mode)
@@ -61,10 +60,11 @@
 ;;   :config (setq ensime-startup-notification nil))
 
 ;; Org mode config
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(use-package org
+  :bind (("C-c l" . 'org-store-link)
+	 ("C-c c" . 'org-capture)
+	 ("C-c a" . 'org-agenda)
+	 ("C-c b" . 'org-iswitchb)))
 
 ;; prev-window
 (defun prev-window ()
