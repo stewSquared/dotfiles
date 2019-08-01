@@ -23,11 +23,11 @@
 (use-package markdown-mode)
 (use-package clojure-mode)
 (use-package scala-mode)
-(use-package geiser)
 (use-package rainbow-delimiters)
 
 ;; geiser config
-(setq geiser-active-implementations '(guile racket))
+(use-package geiser
+  :init (setq geiser-active-implementations '(guile racket)))
 
 ;; smartparens config
 (use-package smartparens :demand
