@@ -32,7 +32,6 @@
 (install 'geiser)
 (install 'rainbow-delimiters)
 (install 'elm-mode)
-(install 'magit)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
@@ -86,12 +85,15 @@
   :bind-keymap ("C-c p" . projectile-command-map)
   :config (projectile-mode +1))
 
+;; Magit config
+(use-package magit
+  :bind ("C-x g" . 'magit-status))
+
 ;; Misc.
 (column-number-mode 1)
 (visual-line-mode t)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-?") 'help-command)
-(global-set-key (kbd "C-x g") 'magit-status)
 (set-default 'truncate-lines t)
 (global-auto-revert-mode 1)
 (setq vc-follow-symlinks t)
