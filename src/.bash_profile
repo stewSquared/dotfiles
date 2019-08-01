@@ -21,6 +21,7 @@ PATH=$PATH:$ACTIVATOR_HOME/bin
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/github.com/drivergroup/ude-scripts
 PATH=$PATH:$HOME/perl5/bin
+PATH=$PATH:$HOME/github.com/lampepfl/dotty/bin
 
 ## Common env
 export VISUAL="/usr/bin/emacsclient -c"
