@@ -25,7 +25,6 @@
 (use-package clojure-mode)
 (use-package scala-mode)
 (use-package dash)
-(use-package cider)
 (use-package geiser)
 (use-package rainbow-delimiters)
 (use-package elm-mode)
@@ -44,8 +43,9 @@
   (sp-use-smartparens-bindings)
   (smartparens-global-strict-mode))
 
-;; cider config
-(add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
+;; Cider config
+(use-package cider
+  :hook (cider-repl-mode . rainbow-delimiters-mode))
 
 ;; ensime config
 ;; (require 'ensime)
