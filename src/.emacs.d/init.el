@@ -24,6 +24,9 @@
 (use-package clojure-mode)
 (use-package rainbow-delimiters)
 
+(use-package flycheck
+  :init (global-flycheck-mode))
+
 (use-package scala-mode
   :mode "\\.s\\(cala\\|bt\\)$")
 
