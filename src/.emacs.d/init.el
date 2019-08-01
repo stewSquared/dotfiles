@@ -56,7 +56,6 @@
 (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
 
 ;; ensime config
-(require 'ensime)
 (setq ensime-startup-notification nil)
 
 ;; Org mode config
