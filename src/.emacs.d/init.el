@@ -27,7 +27,6 @@
 (install 'markdown-mode)
 (install 'go-mode)
 (install 'clojure-mode)
-(install 'smartparens)
 (install 'scala-mode)
 (install 'ensime)
 (install 'dash)
@@ -44,11 +43,15 @@
 (setq geiser-active-implementations '(guile racket))
 
 ;; smartparens config
-(require 'smartparens-config)
-(sp-use-smartparens-bindings)
-(smartparens-global-strict-mode)
-(add-hook 'clojure-mode-hook 'smartparens-strict-mode)
-(add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
+(use-package smartparens
+  :hook (clojure-mode cider-repl-mode)
+  :bind (:map smartparens-mode-map
+	      ("M-<down>" . 'sp-splice-sexp-killing-forward)
+	      ("M-<up>" . 'sp-splice-sexp-killing-backward)
+	      ("M-s" . 'sp-splice-sexp-killing-around))
+  :config
+  (sp-use-smartparens-bindings)
+  (smartparens-global-strict-mode))
 
 ;; cider config
 (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
@@ -61,11 +64,6 @@
   '(progn
      (add-to-list 'ac-modes 'cider-mode)
      (add-to-list 'ac-modes 'cider-repl-mode)))
-
-;;(define-key smartparens-mode-map (kbd "your-key") 'function)
-(define-key smartparens-mode-map (kbd "M-<down>") 'sp-splice-sexp-killing-forward)
-(define-key smartparens-mode-map (kbd "M-<up>") 'sp-splice-sexp-killing-backward)
-(define-key smartparens-mode-map (kbd "M-s") 'sp-splice-sexp-killing-around)
 
 ;; ensime config
 (require 'ensime)
