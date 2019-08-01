@@ -34,7 +34,7 @@
 
 ;; smartparens config
 (use-package smartparens :demand
-  :hook (clojure-mode cider-repl-mode)
+  :hook (clojure-mode)
   :bind (:map smartparens-mode-map
 	      ("M-<down>" . 'sp-splice-sexp-killing-forward)
 	      ("M-<up>" . 'sp-splice-sexp-killing-backward)
@@ -44,8 +44,8 @@
   (smartparens-global-strict-mode))
 
 ;; Cider config
-(use-package cider
-  :hook (cider-repl-mode . rainbow-delimiters-mode))
+;; (use-package cider
+;;   :hook (cider-repl-mode . rainbow-delimiters-mode))
 
 ;; ensime config
 ;; (require 'ensime)
