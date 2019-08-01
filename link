@@ -4,14 +4,14 @@ unpack () {
     local -r filename=$1
     local -r target=$filename
     local -r link_name=~/$(basename $filename)
-    if [[ ! -e $link_name ]]; then
+    if [[ -h $link_name ]]; then
+	ln -nsf $target $link_name
+	echo "$(tput setaf 3)updated:$(tput sgr0) $link_name -> $target"
+    elif [[ -e $link_name ]]; then
+	echo "$(tput setaf 1)skipped:$(tput sgr0) $link_name. File already already exists."
+    else
 	ln -s -T $target $link_name
 	echo "$(tput setaf 2)created:$(tput sgr0) $link_name -> $target"
-    elif [[ -h $link_name ]]; then
-	ln -nsf $target $link_name
-	echo "$(tput setaf 1)updated:$(tput sgr0) $link_name -> $target"
-    else
-	echo "$(tput setaf 3)skipped:$(tput sgr0) $link_name. File already already exists."
     fi
 }
 
