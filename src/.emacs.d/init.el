@@ -27,6 +27,12 @@
 (use-package flycheck
   :init (global-flycheck-mode))
 
+(use-package lsp-mode
+  :hook (scala-mode . lsp)
+  :config (setq lsp-prefer-flymake nil))
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package company-lsp :commands company-lsp)
+
 (use-package scala-mode
   :mode "\\.s\\(cala\\|bt\\)$")
 
