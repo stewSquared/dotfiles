@@ -36,12 +36,12 @@
 ! xterm conf
 XTerm.termName: xterm-256color
 XTerm.saveLines: 1048576
-XTerm*font: xft:inconsolata:size=12
+XTerm*font: xft:inconsolata:size=20
 XTerm*metaSendsEscape: true
 
 ! urxvt conf
 URxvt.scrollBar: false
-URxvt*font: xft:inconsolata:size=12
+URxvt*font: xft:inconsolata:size=20
 URxvt*intensityStyles: false
 
 ! emacs conf
@@ -49,6 +49,6 @@ emacs*toolBar: 0
 emacs*menuBar: off
 emacs*verticalScrollBars: off
 emacs*FontBackend: xft
-emacs*font: inconsolata:fontSize=12
+emacs*font: inconsolata 20
 
 Xcursor.size: 32
