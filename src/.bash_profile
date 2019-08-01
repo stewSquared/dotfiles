@@ -30,7 +30,7 @@ export GIT_EDITOR="/usr/bin/emacsclient -t"
 export PAGER="less -S"
 
 ## system-specific
-export IW_INTERFACE=wlp4s0
+export IW_INTERFACE=wlp3s0
 
 ## perl lib
 PERL5LIB="/home/stew/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
