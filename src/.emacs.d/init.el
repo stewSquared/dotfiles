@@ -28,7 +28,6 @@
 (install 'go-mode)
 (install 'clojure-mode)
 (install 'scala-mode)
-(install 'ensime)
 (install 'dash)
 (install 'cider)
 (install 'geiser)
@@ -56,7 +55,10 @@
 (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
 
 ;; ensime config
-(setq ensime-startup-notification nil)
+;; (require 'ensime)
+;; (use-package ensime
+;;   :ensure t
+;;   :config (setq ensime-startup-notification nil))
 
 ;; Org mode config
 (global-set-key "\C-cl" 'org-store-link)
