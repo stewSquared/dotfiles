@@ -21,13 +21,10 @@
 (setq use-package-always-ensure t)
 
 (use-package markdown-mode)
-(use-package go-mode)
 (use-package clojure-mode)
 (use-package scala-mode)
-(use-package dash)
 (use-package geiser)
 (use-package rainbow-delimiters)
-(use-package elm-mode)
 
 ;; geiser config
 (setq geiser-active-implementations '(guile racket))
