@@ -51,3 +51,15 @@ task-local () {
 disown-background-command () {
     eval $@ > /dev/null & disown $!
 }
+
+scala-typedef () {
+    git ls-files | grep scala\$ | xargs egrep --color=always "(class|trait|type) $1"
+}
+
+scala-termdef () {
+    git ls-files | grep scala\$ | xargs egrep --color=always "(val|var|def|object) $1"
+}
+
+scala-def () {
+    git ls-files | grep scala\$ | xargs egrep --color=always "(val|var|def|object|class|trait|type) $1"
+}
