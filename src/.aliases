@@ -76,7 +76,6 @@ alias dv='setxkbmap -layout dvorak -option ctrl:nocaps; stty erase ; exit'
 alias ek=dv
 alias docker-default-postgres='docker run -it -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -e POSTGRES_PASSWORD=postgres postgres'
 alias REPLesent='scala -Dscala.color -language:_ -nowarn -i REPLesent.scala'
-alias touchpad-toggle='source ~/bin/touchpad-toggle'
 alias pingc='watch ping -c 1 8.8.8.8'
 alias service-sources='find github.com/drivergroup/*-service/src/*/scala -name "*.scala"'
 #alias bt='sudo hciconfig hci0 up; sudo hcitool cc 90:7F:61:2C:10:F5'
