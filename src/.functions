@@ -14,12 +14,6 @@ clone-github () {
     fi
 }
 
-clone-drivergroup () {
-    local -r repo=$(sed -e "s|.*github.com/drivergroup/||" <<< $1)
-    clone-github "drivergroup/$repo"\
-	&& git config --local user.email 'stewart@driver.xyz'
-}
-
 task-init () {
     if [[ (-e .taskrc) ]]; then
 	echo "Taskwarrior config already exists"

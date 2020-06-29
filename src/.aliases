@@ -1,13 +1,7 @@
 #!/usr/bin/bash
 
-# nav
-alias ls='ls --color=auto'
-alias .='ls .'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
 # default flags
+alias ls='ls --color=auto'
 alias python='python -q'
 alias cp='cp -i'
 alias du='du -h'
@@ -27,13 +21,11 @@ alias gimit='git commit'
 alias gamend='gimit --amend --no-edit'
 alias ginit='git init'
 alias gist='git status'
-alias gout='git checkout'
 alias hist='git hist'
 alias gidif='git diff'
 alias hista='git hista'
 alias save='git stash save'
 alias gh="clone-github"
-alias dg="clone-drivergroup"
 
 # forgetting to type 'git'
 alias push='git push'
@@ -43,23 +35,25 @@ alias merge='git merge'
 alias clone='git clone'
 alias commit='git commit'
 alias stash='git stash'
-alias rebase='git rebase -i'
 
-# wifi.
+# WiFi
 alias wup='sudo ip link set $IW_INTERFACE up'
 alias wdn='sudo ip link set $IW_INTERFACE down'
 alias wpa_supplicant='wpa_supplicant -i $IW_INTERFACE'
 alias wpa='sudo wpa_supplicant -c /etc/wpa_supplicant/default.conf -B'
 alias wlan='sudo iw dev $IW_INTERFACE'
-alias wfnd='wlan scan | grep -i ssid'
+alias wscan='wlan scan | grep "\sSSID:" | cut -d : -f 2 | sort | uniq'
 alias wcon='wlan connect'
 alias wpatemp='sudo wpa_supplicant -c temp.conf'
+alias macchanger='macchanger $IW_INTERFACE'
+alias macchangera='wdn && sudo macchanger -a && wup'
 
 # pass-through aliases
 alias sudo='sudo '
 alias man='man '
 alias watch='watch -n 0.5 -c '
 alias xargs='xargs '
+alias slock='slock '
 alias d='disown-background-command '
 
 # configuration
@@ -75,10 +69,8 @@ alias take='mv ~/downloads/* .'
 alias dv='setxkbmap -layout dvorak -option ctrl:nocaps; stty erase ; exit'
 alias ek=dv
 alias docker-default-postgres='docker run -it -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -e POSTGRES_PASSWORD=postgres postgres'
-alias REPLesent='scala -Dscala.color -language:_ -nowarn -i REPLesent.scala'
+#alias REPLesent='scala -Dscala.color -language:_ -nowarn -i REPLesent.scala'
 alias pingc='watch ping -c 1 8.8.8.8'
-alias service-sources='find github.com/drivergroup/*-service/src/*/scala -name "*.scala"'
-#alias bt='sudo hciconfig hci0 up; sudo hcitool cc 90:7F:61:2C:10:F5'
 alias sus='systemctl suspend'
 alias em='d emacs'
 alias ec='emacsclient -c -n'
