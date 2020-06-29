@@ -28,6 +28,7 @@
 (use-package markdown-mode)
 (use-package clojure-mode)
 (use-package rainbow-delimiters)
+(use-package yasnippet)
 
 (use-package flycheck
   :init (global-flycheck-mode))
