@@ -1,7 +1,8 @@
 \#*\#
 .\#*
-notes/
 .ensime
-.ensime_cache
+.ensime_cache/
 /.task/
 /.taskrc
+.bloop/
+.metals/

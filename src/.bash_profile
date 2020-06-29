@@ -5,6 +5,8 @@
 # Note to self: sometimes called .bash_login -- I like that name better.
 # source ~/.bashrc
 
+echo "I am running bash profile!"
+
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
 ## HOME and PATH
@@ -19,6 +21,7 @@ PATH=$PATH:$ACTIVATOR_HOME/bin
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/github.com/drivergroup/ude-scripts
 PATH=$PATH:$HOME/perl5/bin
+PATH=$PATH:$HOME/github.com/lampepfl/dotty/bin
 
 ## Common env
 export VISUAL="/usr/bin/emacsclient -c"
@@ -27,7 +30,7 @@ export GIT_EDITOR="/usr/bin/emacsclient -t"
 export PAGER="less -S"
 
 ## system-specific
-export IW_INTERFACE=wlp4s0
+export IW_INTERFACE=wlp3s0
 
 ## perl lib
 PERL5LIB="/home/stew/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
