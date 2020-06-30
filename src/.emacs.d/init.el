@@ -45,6 +45,8 @@
 (use-package sbt-mode
   :commands sbt-start sbt-command)
 
+(use-package lsp-metals)
+
 ;; geiser config
 (use-package geiser
   :init (setq geiser-active-implementations '(guile racket)))
