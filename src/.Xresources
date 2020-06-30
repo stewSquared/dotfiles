@@ -45,9 +45,6 @@ URxvt*font: xft:inconsolata:size=20
 URxvt*intensityStyles: false
 
 ! emacs conf
-emacs*toolBar: 0
-emacs*menuBar: off
-emacs*verticalScrollBars: off
 emacs*FontBackend: xft
 emacs*font: inconsolata 20
 
