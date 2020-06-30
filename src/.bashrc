@@ -31,6 +31,7 @@ shopt -s histverify
 HISTFILESIZE=
 HISTSIZE=
 HISTIGNORE="[ ]*"
+HISTCONTROL=ignoreboth
 
 ## env related to shell interface
 export VISUAL="/usr/bin/emacsclient -c"
