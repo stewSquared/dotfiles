@@ -16,6 +16,8 @@
 shopt -s autocd
 shopt -s cdspell
 shopt -os noclobber
+shopt -s checkwinsize
+#shopt -s globstar
 
 function set_prompt {
     local blue="\[$(tput setaf 4)\]"
