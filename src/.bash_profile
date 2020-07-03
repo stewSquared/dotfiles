@@ -5,8 +5,6 @@
 # Note to self: sometimes called .bash_login -- I like that name better.
 # source ~/.bashrc
 
-echo "I am running bash profile!"
-
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
 ## HOME and PATH
