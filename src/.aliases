@@ -28,15 +28,6 @@ alias hista='git hista'
 alias save='git stash save'
 alias gh="clone-github"
 
-# forgetting to type 'git'
-alias push='git push'
-alias pull='git pull'
-alias fetch='git fetch'
-alias merge='git merge'
-alias clone='git clone'
-alias commit='git commit'
-alias stash='git stash'
-
 # WiFi
 alias wup='sudo ip link set $IW_INTERFACE up'
 alias wdn='sudo ip link set $IW_INTERFACE down'
