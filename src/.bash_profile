@@ -7,6 +7,8 @@
 
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
+cd $HOME
+
 ## HOME and PATH
 ACTIVATOR_HOME=$HOME/lib/activator-dist-1.3.10
 export RUBY_HOME=$HOME/.gem/ruby/2.3.0
