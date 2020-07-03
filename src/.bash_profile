@@ -43,3 +43,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/stew/perl5"; export PERL_MM_OPT;
 export SDKMAN_DIR="/home/stew/.sdkman"
 [[ -s "/home/stew/.sdkman/bin/sdkman-init.sh" ]] && source "/home/stew/.sdkman/bin/sdkman-init.sh"
 export JAVA_HOME=/home/stew/.sdkman/candidates/java/11.0.7.hs-adpt
+
+## WSL-specific display config
+export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0
