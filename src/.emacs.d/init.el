@@ -40,7 +40,7 @@
 (use-package company-lsp :commands company-lsp)
 
 (use-package scala-mode
-  :mode "\\.s\\(cala\\|bt\\)$")
+  :mode "\\.s\\(cala\\|bt\\|c\\)$")
 
 (use-package sbt-mode
   :commands sbt-start sbt-command)
