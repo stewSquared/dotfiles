@@ -40,12 +40,14 @@
 (use-package company-lsp :commands company-lsp)
 
 (use-package scala-mode
-  :mode "\\.s\\(cala\\|bt\\|c\\)$")
+  :mode "\\.s\\(cala\\|bt\\|c\\)$"
+  :interpreter ("scala" . scala-mode))
 
 (use-package sbt-mode
   :commands sbt-start sbt-command)
 
-(use-package lsp-metals)
+(use-package lsp-metals
+  :config (setq lsp-metals-treeview-show-when-views-received t))
 
 ;; geiser config
 (use-package geiser
