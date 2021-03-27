@@ -14,7 +14,7 @@ alias less='less -R -S -# .1'
 alias psql='psql -S'
 alias gzip='gzip -k'
 alias feh='feh -F'
-alias sbt='sbt -mem 2048' # double the default of 1024
+alias sbt='sbt -Dsbt.semanticdb=true -mem 2048' # double the default of 1024
 
 # git aliases
 alias gad='git add'
