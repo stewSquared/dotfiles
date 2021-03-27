@@ -6,3 +6,6 @@
 /.taskrc
 .bloop/
 .metals/
+.bsp/
+.vscode/
+metals.sbt
