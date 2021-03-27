@@ -20,6 +20,7 @@ PATH=$PATH:$GOPATH/bin
 PATH=$PATH:$HOME/github.com/drivergroup/ude-scripts
 PATH=$PATH:$HOME/perl5/bin
 PATH=$PATH:$HOME/github.com/lampepfl/dotty/bin
+PATH=$PATH:$HOME/.local/share/coursier/bin
 
 ## Common env
 export VISUAL="/usr/bin/emacsclient -c"
