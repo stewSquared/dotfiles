@@ -2,7 +2,7 @@
 
 # default flags
 alias ls='ls --color=auto'
-alias python='python -q'
+alias python='python3 -q'
 alias cp='cp -i'
 alias du='du -h'
 alias df='df -h'
