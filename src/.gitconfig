@@ -1,10 +1,13 @@
 [user]
 	name = Stewart Stewart
-	email = stewinsalot@gmail.com
+	email = stewartstewart@etsy.com
+	signingkey = stewartstewart@etsy.com
 [core]
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /home/stew/.gitignore_global
+[commit]
+	gpgsign = true
 [alias]
   co = checkout
   ci = commit
