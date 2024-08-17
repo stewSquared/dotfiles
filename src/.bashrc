@@ -37,8 +37,10 @@ HISTCONTROL=ignoreboth
 
 ## env related to shell interface
 export VISUAL="/usr/bin/emacsclient -c"
-export EDITOR="/usr/bin/emacsclient -t"
-export GIT_EDITOR="/usr/bin/emacsclient -t"
+#export EDITOR="/usr/bin/emacsclient -t"
+#export GIT_EDITOR="/usr/bin/emacsclient -t"
+export EDITOR="/usr/local/bin/mg"
+export GIT_EDITOR="/usr/local/bin/mg"
 export PAGER="less --chop-long-lines --shift .1"
 
 ## bash-completion from brew installed packages
