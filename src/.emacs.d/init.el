@@ -119,3 +119,16 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq mouse-yank-at-point t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(company-lsp yasnippet solarized-theme smartparens sbt-mode rainbow-delimiters projectile magit lsp-ui lsp-metals geiser flycheck cider)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
